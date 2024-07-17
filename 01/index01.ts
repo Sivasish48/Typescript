@@ -20,9 +20,60 @@
 
 //exmple of a function
 
-function add(a:number,b:number){
-  return a+b
-}
 
-let ans = add(2,4)
-console.log(ans)
+function add(a:number,b:number):number{
+    return a+b
+  }
+  
+  let c = add(34,5)
+  console.log(c)
+
+
+  //let us create a calculator which takes 3 arguments
+
+function calculator(a:number,b:number, calcType:string ){
+    if (calcType === "sum" || calcType ==="add"){
+      return a+b
+    } else if(calcType === "mul"){
+      return a*b
+    }else if(calcType === "sub"){
+      return a-b
+    }else if (calcType === "div"){
+      return a/b
+    }else{
+      return calcType + "is not a calculation operation."
+    }
+  }
+  
+  let answer = calculator(56,7,"div")
+  console.log(answer)
+
+
+  // but this is not the actuall way to do this , the right way is to define the string when the defining the typr string 
+
+
+
+function calculators(
+     a:number,
+     b:number,
+     calcType: "sum" | "add" | "mul" | "sub" | "div" 
+    ):number{
+    if (calcType === "sum" || calcType ==="add"){
+      return a+b
+    }if(calcType === "mul"){
+      return a*b
+    }if(calcType === "sub"){
+      return a-b
+    }if (calcType === "div"){
+      return a/b
+    }
+    return -1
+  }
+  let answers = calculators(56,45,"div")
+  console.log(answers)
+
+  //NOTE 
+  // Typescript never uses a isolated exection environment. or never runs the code .
+  // it converts the code into a js code by making sure the types are write.
+  // so the code is not executed untill the types are written.
+ // the typescript throws a compilation errors if the types are not written.
