@@ -1,0 +1,121 @@
+// so in this file we have parameters of the configurations of the convertion
+
+{
+  "compilerOptions": {
+         
+     "target": "es2016",
+
+// The target configuration parameter in the compilerOptions section of the tsconfig.json file specifies the version of ECMAScript (JavaScript) to which the TypeScript code will be transpiled. This determines the syntax and features that the TypeScript compiler will use when generating the output JavaScript code.
+// When you set the target option, you are telling the TypeScript compiler what level of JavaScript features your output should use. Different ECMAScript versions introduce new features and syntax, so choosing the correct target is essential for compatibility with the environments where your JavaScript code will run (e.g., browsers, Node.js).
+// Example: "target": "es2016"
+// Setting "target": "es2016" means that the TypeScript compiler will transpile your TypeScript code into JavaScript that adheres to the ECMAScript 2016 (ES7) standard. 
+
+// The target you choose should be based on the environment where your JavaScript will run. Here are some common values for the target option and the corresponding ECMAScript versions:
+// "ES3": Very old JavaScript version, supported by all JavaScript engines.
+// "ES5": Supported by all modern browsers, often used for wide compatibility.
+// "ES6" / "ES2015": Introduces classes, modules, arrow functions, let/const, and many other modern features.
+// "ES2016": Adds the exponentiation operator and Array.prototype.includes.
+// "ES2017": Adds async/await.
+// "ES2018": Adds rest/spread properties for objects.
+// "ES2019": Adds Array.prototype.flat and Array.prototype.flatMap, optional catch binding.
+// "ES2020": Adds BigInt, Promise.allSettled, dynamic import, and more.
+// "ES2021": Adds logical assignment operators, String.prototype.replaceAll, and more.
+// "ES2022": Adds class fields, top-level await, and more.
+
+
+"module": "commonjs",
+
+//The module configuration option in the tsconfig.json file specifies the module code generation system that the TypeScript compiler will use. 
+//This determines how the TypeScript modules (files) will be converted into JavaScript modules. 
+//Different module systems are used in various JavaScript environments, such as Node.js or modern browsers.
+
+// The module option can be set to one of the following values:
+
+// 1. "commonjs": The default module system used by Node.js. This generates CommonJS modules, which are compatible with both Node.js and modern browsers.
+// example
+
+// here below is the TypeScript code
+// export function greet() {
+//   console.log('Hello, world!');
+// }
+
+// // JavaScript (compiled with "module": "commonjs") , the way it wil will genearte the code
+// "use strict";
+// exports.__esModule = true;
+// exports.greet = void 0;
+// function greet() {
+//   console.log('Hello, world!');
+// }
+// exports.greet = greet;
+// }
+
+
+// 2. AMD (amd)
+// Used in browsers for asynchronous module loading.
+// example
+
+// //here is the TypeScript code
+// export function greet() {
+//   console.log('Hello, world!');
+// }
+
+
+// // JavaScript (compiled with "module": "amd") , the way it wil will genearte the code
+
+// define(["require", "exports"], function (require, exports) {
+//   "use strict";
+//   exports.__esModule = true;
+//   function greet() {
+//     console.log('Hello, world!');
+//   }
+//   exports.greet = greet;
+// });
+
+
+//3. UMD (umd):
+
+//  Universal Module Definition, compatible with both CommonJS and AMD environments.
+//example
+
+// Here is the TypeScript code
+// export function greet() {
+//   console.log('Hello, world!');
+// }
+
+
+// JavaScript (compiled with "module": "umd"), the way it will generate the code
+// (function (factory) {
+//   if (typeof module === "object" && typeof module.exports === "object") {
+//     var v = factory(require, exports);
+//     if (v !== undefined) module.exports = v;
+//   } else if (typeof define === "function" && define.amd) {
+//     define(["require", "exports"], factory);
+//   }
+// })(function (require, exports) {
+//   "use strict";
+//   exports.__esModule = true;
+//   function greet() {
+//     console.log('Hello, world!');
+//   }
+//   exports.greet = greet;
+// });
+
+// 4. ES6 (es6):
+// Standard module system in modern JavaScript (ES6+), supported by modern browsers and Node.js.
+
+// Here is the TypeScript code
+
+// export function greet() {
+//   console.log('Hello, world!');
+// }
+
+// here is the converted or the thee way it will be converted
+// export function greet() {
+//   console.log('Hello, world!');
+// }
+
+
+"forceConsistentCasingInFileNames":true ,
+
+  }
+}
