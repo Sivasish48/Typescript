@@ -116,6 +116,11 @@
 
 
 "forceConsistentCasingInFileNames":true ,
+// Consistency: Enforces that the casing of file names in import statements matches exactly with the casing of the actual file names. This helps avoid discrepancies and potential bugs.
+// When "forceConsistentCasingInFileNames": true is enabled, the TypeScript compiler will check that all file imports match the case of the file names on disk. If there is a mismatch, the compiler will throw an error.
+ 
+"strict": true,
+//provides a comprehensive level of type safety and ensures that your TypeScript code is more robust and less prone to errors.
 
-  }
+}
 }
