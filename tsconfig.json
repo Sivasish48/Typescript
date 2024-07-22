@@ -3,7 +3,7 @@
 {
   "compilerOptions": {
          
-     "target": "es2016",
+     "target": "ES2015",
 
 // The target configuration parameter in the compilerOptions section of the tsconfig.json file specifies the version of ECMAScript (JavaScript) to which the TypeScript code will be transpiled. This determines the syntax and features that the TypeScript compiler will use when generating the output JavaScript code.
 // When you set the target option, you are telling the TypeScript compiler what level of JavaScript features your output should use. Different ECMAScript versions introduce new features and syntax, so choosing the correct target is essential for compatibility with the environments where your JavaScript code will run (e.g., browsers, Node.js).
