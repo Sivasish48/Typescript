@@ -38,3 +38,5 @@ console.log(profile({
   //output
   
  // Name is Suvam and age is 22 and job is Software Engineer and belongs to Bangalore,Karnataka,560067
+
+ 
