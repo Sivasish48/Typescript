@@ -34,3 +34,24 @@ interface Person {
   // Expected output
   // Student name is Suvam and age is 22 and roll no is 12345 and class is 10th and teacher name is Suvam and age is 22 and subject is Computer Science and salary is 10000
   
+
+  // Note interface can have optional properties too
+  interface Person {
+    name: string;
+    age: number;
+    address?: string;
+  }
+  
+  function School(student: Person): string {
+    return `Student name is ${student.name} and age is ${student.age} and address is ${student.address}`;
+  }
+  
+
+  console.log(School({
+    name: "Suvam",
+    age: 22,
+    address: "Bangalore"
+  }));
+  
+  // Expected output
+  // Student name is Suvam and age is 22 and address is Bangalore
