@@ -16,3 +16,7 @@ enum Direction {
   move(Direction.Up);  // Valid
   move(Direction.Left);  // Valid
   // move(2);  // Invalid, would throw an error
+
+
+
+  
