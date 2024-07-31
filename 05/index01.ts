@@ -24,3 +24,32 @@ function getFirstElement(arr: string[]): string {
   const firstFruit = getFirstElement(fruits);
   
   console.log(firstFruit); // Output: apple
+
+
+
+  // another example 
+
+  type numbersarr = number[]
+
+function first (arr:numbersarr):number{
+    return arr[0]
+}
+
+let thearr = [23,45,67,89]
+
+console.log(first(thearr)) // Output: 23
+
+
+
+
+// another example
+
+type numberOrString = (number | string)[]
+
+function first (arr:numberOrString):(number | string){
+    return arr[0]
+}
+
+let thearr = ["3scf",'cdc','aadw']
+
+console.log(first(thearr)) // Output: 3scf
